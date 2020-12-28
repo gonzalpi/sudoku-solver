@@ -1,6 +1,4 @@
 import numpy as np
-import math
-import time
 
 def solve(board):
 
@@ -26,8 +24,8 @@ def solve(board):
         # initialization of variables
         pRow = coords[kTile , 0]
         qCol = coords[kTile , 1]
-        quad = [math.floor(pRow/3) * 3,
-                math.floor(qCol/3) * 3] # 3-by-3 square location
+        quad = [(pRow // 3) * 3,
+                (qCol // 3) * 3] # 3-by-3 square location
         
         # resetting of discarded value when it's any but the last tile
         if kTile != emptyTiles - 1:
